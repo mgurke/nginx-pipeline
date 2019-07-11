@@ -40,5 +40,9 @@ jobs:
         args:
         - -exc
         - |
-          echo "Hello Maurice from the other side!"
-          bosh vms
+          export BOSH_ENVIRONMENT=((bosh_env))
+          export BOSH_CLIENT=((bosh_client))
+          export BOSH_CLIENT_SECRET=((bosh_client_secret))
+          export BOSH_ENVIRONMENT=((bosh_url))
+          export BOSH_CA_CERT=((bosh_ca_cert))
+          bosh alias-env vbox -e 192.168.50.6
