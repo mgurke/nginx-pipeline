@@ -1,12 +1,12 @@
 ---
 resources:
-- name: source-code
+- name: nginx-release
   type: git
   source:
     uri: git@github.com:mgurke/nginx-release.git
     branch: master
     private_key: ((priv_key))
-- name: pipeline
+- name: nginx-pipeline
   type: git
   source:
     uri: git@github.com:mgurke/nginx-pipeline.git
@@ -15,14 +15,30 @@ resources:
 
       
 
-inputs:
-- name: pipeline
+
 
 jobs:
-  - name: deploy nginx
-    public: true
-    plan:
-      - get: source-code
-      - get: pipeline
-      - task: deploy-nginx
-        file: pipeline/create-release.yml
+- name: create-release
+  public: true
+  plan:
+  - get: nginx-release
+    trigger: true
+  - get: nginx-pipeline  
+    trigger: true
+  - task: hello-world
+    config:
+      platform: linux
+      inputs:
+      - name: nginx-pipeline
+      image_resource:
+        type: docker-image
+#  source: {repository: busybox}
+        source: {repository: governmentpaas/bosh-cli} 
+    
+      run:
+        path: /bin/bash
+        args:
+        - -exc
+        - |
+          echo "Hello Maurice from the other side!"
+          bosh vms
