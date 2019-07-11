@@ -6,33 +6,7 @@ resources:
     uri: git@github.com:mgurke/nginx-release.git
     branch: master
     private_key: |
-      -----BEGIN OPENSSH PRIVATE KEY-----
-        b3BlbnNzaC1rZXktdjEAAAAABG5vbmUAAAAEbm9uZQAAAAAAAAABAAABFwAAAAdzc2gtcn
-        NhAAAAAwEAAQAAAQEAsOBNvQbhiIY30isoNkPJSnZWpCeaiujUvt+oPZlM9BXjf8W+dWLq
-        rY7b5+lKZf+G9h564TEXUan3MHea7fcwkjUqnJ7NnVbBkngOx4OyTUJZh4fVSJ1vEVkJTi
-        dMmd3IAJplQuju8Jh8crcTcTgEhOiEk9ilXr8p+E1OARsL6RdAt5O3h9T92yQwMNe5tVts
-        MnZ5izgtjBewZfouYTiO/dLtYF1VMJ15HYPTf7taLyeZSqZhZEKg7QQUl6CNYojtsjb/MF
-        nrnrGwmmBF6ubWqVf58vY9qbIYU6QUjatxQcq8NC7lP7FaW72PKQDHQ4fMk57oGFo5r8bi
-        mV7c9phuvwAAA9iVw3yHlcN8hwAAAAdzc2gtcnNhAAABAQCw4E29BuGIhjfSKyg2Q8lKdl
-        akJ5qK6NS+36g9mUz0FeN/xb51Yuqtjtvn6Upl/4b2HnrhMRdRqfcwd5rt9zCSNSqcns2d
-        VsGSeA7Hg7JNQlmHh9VInW8RWQlOJ0yZ3cgAmmVC6O7wmHxytxNxOASE6IST2KVevyn4TU
-        4BGwvpF0C3k7eH1P3bJDAw17m1W2wydnmLOC2MF7Bl+i5hOI790u1gXVUwnXkdg9N/u1ov
-        J5lKpmFkQqDtBBSXoI1iiO2yNv8wWeuesbCaYEXq5tapV/ny9j2pshhTpBSNq3FByrw0Lu
-        U/sVpbvY8pAMdDh8yTnugYWjmvxuKZXtz2mG6/AAAAAwEAAQAAAQEAlxrIztf2DOA9B/t+
-        mv1GFasLUanTySAnv/jqjdVNfKjGdf3FPBuJSURmcbVHreOitNhNOdzqgwWk+27ymKE4iW
-        +KO8se9W+MZ0jRt3i29nHccoCEoUh9/mAGJxJDyp9BoeJE5+h/WGOszYPBxFOK6NCLkpLe
-        lBbUECBap28nubSLWpdLdfOEKwNxTGH+nu+73eehRJ1ekEVYCTolx4UXnFlJ4FH5Xr5gpo
-        z4GjOFqKhpe044imQumM8c6Byi8LJmz5z29w9tSOj0y0o89dYqfHrnjFrK4N1nQMitG9CI
-        Qt5UXbMnOC5XP7FRT5GYlgOjmRvBFKxkDJa0DSGKDmgYwQAAAIAJTPR1RK3GuYFrI4Btul
-        x3kt9qDEnvzmm/Qvgq1OMf4IimPMjDyyM6RbtHdZhxajBuQtSCHic6+xcHNQNC1CqNp06D
-        d49EfiveuytV3C4tYbZ9Oj6HLzo4IKT/D3Ihli80JpRAydu2NfsW5QxPO1pRAcy+3oxssS
-        pk1oJgyr6l0gAAAIEA45WRVoWWJNwuuK7kOuOcMCnIQMiPlhnesXuIW9QLdPygyjg1BaD1
-        Lyr18187aa2AfcE2ES/IsCXPzPo2i+zVeZ6/3jhsP0xbZsqqKtAitMrQc0C6B+Vb0TWIsz
-        1084vukZrEbKB+fB3TiVjHP3U2sw9elyVEHCkey05remW29qkAAACBAMb1605ruftny/wI
-        /JuxxBY0FYssH3D+bm/JpC2prTTGK8yHoUn6wzt1NTtXVXQLb/kLPdpYAoE089Zn1jF2xi
-        Efkvjb898qTyEY9zvvIY3k3ppcaNcZ8xMEy19kA1WoqU5yY1WCQeLzhxI6XU3nGSTxt7ge
-        kolSFGGH+dhQmeMnAAAAG21hdXJpY2Vnb2Vya2VAZXYtbS1NRy5sb2NhbAECAwQFBgc=
-      -----END OPENSSH PRIVATE KEY-----
+      
 
 
 
