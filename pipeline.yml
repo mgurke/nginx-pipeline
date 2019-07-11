@@ -15,7 +15,8 @@ resources:
 
       
 
-
+inputs:
+- name: pipeline
 
 jobs:
   - name: deploy nginx
