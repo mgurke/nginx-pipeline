@@ -5,17 +5,23 @@ resources:
   source:
     uri: git@github.com:mgurke/nginx-release.git
     branch: master
-    private_key: |
+    private_key: ((priv_key))
+- name: pipeline
+  type: git
+  source:
+    uri: git@github.com:mgurke/nginx-pipeline.git
+    branch: master
+    private_key: ((priv_key))
+
       
 
 
 
 jobs:
   - name: deploy nginx
+    public: true
     plan:
       - get: source-code
+      - get: pipeline
       - task: deploy-nginx
-        run:
-          path: /nginx-release/lifecycle.sh
-
-
+        file: pipeline/create-release.yml
