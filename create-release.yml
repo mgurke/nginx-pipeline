@@ -8,3 +8,4 @@ image_resource:
   source: {repository: busybox}
 run:
   path: ls
+  args: [pipeline]
