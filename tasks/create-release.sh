@@ -1,3 +1,5 @@
 #!/bin/bash
 set -x
-nginx-release/scripts/connect-director.sh
+ls -la nginx-pipeline
+ls -la nginx-release
+nginx-pipeline/scripts/connect-director.sh
