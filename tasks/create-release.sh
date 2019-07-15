@@ -1,4 +1,3 @@
 #!/bin/bash
 set -x
-ls -la
-/scripts/connect-director.sh
+nginx-release/scripts/connect-director.sh
