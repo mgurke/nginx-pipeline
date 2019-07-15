@@ -8,7 +8,7 @@ image_resource:
 inputs:
 - name: nginx-pipeline
 - name: nginx-release
-- name: tasks
+
 
 
 run:
