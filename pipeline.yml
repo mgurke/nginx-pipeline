@@ -15,8 +15,6 @@ resources:
 
       
 
-
-
 jobs:
 - name: create-release
   public: true
@@ -25,24 +23,15 @@ jobs:
     trigger: true
   - get: nginx-pipeline  
     trigger: true
-  - task: hello-world
+  - task: create-release
+    file: nginx-pipeline/tasks/create-release.yml
+#    params:
+#        BOSH_CLIENT: ((bosh_client))
+#        BOSH_CLIENT_SECRET: ((bosh_client_secret))
+#        BOSH_ENVIRONMENT: ((bosh_url))
+#        BOSH_CA_CERT: "((bosh_ca_cert))"
     config:
       platform: linux
       inputs:
       - name: nginx-pipeline
-      image_resource:
-        type: docker-image
-#  source: {repository: busybox}
-        source: {repository: governmentpaas/bosh-cli} 
-    
-      run:
-        path: /bin/bash
-        args:
-        - -exc
-        - |
-          export BOSH_ENVIRONMENT=((bosh_env))
-          export BOSH_CLIENT=((bosh_client))
-          export BOSH_CLIENT_SECRET=((bosh_client_secret))
-          export BOSH_ENVIRONMENT=((bosh_url))
-          export BOSH_CA_CERT=((bosh_ca_cert))
-          bosh alias-env vbox -e 192.168.50.6
+      - name: connect_director
