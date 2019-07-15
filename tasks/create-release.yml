@@ -8,8 +8,9 @@ image_resource:
 inputs:
 - name: nginx-pipeline
 - name: nginx-release
+- name: tasks
 
 
 run:
-  path: nginx-pipeline/tasks/create-release.sh
+  path: nginx-release/tasks/create-release.sh
   args: [nginx-pipeline, nginx-release]

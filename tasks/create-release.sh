@@ -1,4 +1,3 @@
 #!/bin/bash
-sudo su
 set -x
-/scripts/connect-director.sh
+./scripts/connect-director.sh
