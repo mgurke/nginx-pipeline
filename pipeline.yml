@@ -25,11 +25,13 @@ jobs:
     trigger: true
   - task: create-release
     file: nginx-pipeline/tasks/create-release.yml
-#    params:
-#        BOSH_CLIENT: ((bosh_client))
-#        BOSH_CLIENT_SECRET: ((bosh_client_secret))
-#        BOSH_ENVIRONMENT: ((bosh_url))
-#        BOSH_CA_CERT: "((bosh_ca_cert))"
+    params:
+        BOSH_CLIENT: ((bosh_client))
+        BOSH_CLIENT_SECRET: ((bosh_client_secret))
+        BOSH_ENVIRONMENT: ((bosh_url))
+        BOSH_CA_CERT: "((bosh_ca_cert))"
+        BOSH_ALIAS: ((bosh_alias))
+        BOSH_IP: ((bosh_ip))
 #    config:
 #      platform: linux
 #      inputs:
