@@ -30,8 +30,8 @@ jobs:
 #        BOSH_CLIENT_SECRET: ((bosh_client_secret))
 #        BOSH_ENVIRONMENT: ((bosh_url))
 #        BOSH_CA_CERT: "((bosh_ca_cert))"
-    config:
-      platform: linux
-      inputs:
-      - name: nginx-pipeline
-      - name: connect_director
+#    config:
+#      platform: linux
+#      inputs:
+#      - name: nginx-pipeline
+#      - name: connect_director
