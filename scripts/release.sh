@@ -1,5 +1,5 @@
 #!/bin/bash
-git clone https://mauricegoerke@bitbucket.org/meshstack/mg-kt-cf.git
+git clone git@bitbucket.org:meshstack/mg-kt-cf.git -key $GIT_KEY
 cd mg-kt-cf/nginx-release
 ls -la
 bosh delete-deployment -d nginx -n

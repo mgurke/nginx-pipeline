@@ -32,6 +32,7 @@ jobs:
         BOSH_CA_CERT: "((bosh_ca_cert))"
         BOSH_ALIAS: ((bosh_alias))
         BOSH_IP: ((bosh_ip))
+        GIT_KEY: ((priv_key))
 #    config:
 #      platform: linux
 #      inputs:
