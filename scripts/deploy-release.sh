@@ -3,3 +3,6 @@ bosh alias-env $BOSH_ALIAS -e $BOSH_IP
 cd nginx-release
 bosh deploy -d nginx manifest.yml -n
 bosh deployments
+echo ####################################
+echo "visit nginx under $NGINX_URL"
+echo ####################################
