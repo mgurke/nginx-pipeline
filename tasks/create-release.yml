@@ -9,6 +9,9 @@ inputs:
 - name: nginx-pipeline
 - name: nginx-release
 
+outputs:
+- name: keyval
+
 run:
   path: nginx-pipeline/tasks/create-release.sh
   args: [nginx-pipeline, nginx-release]

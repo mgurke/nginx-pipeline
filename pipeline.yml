@@ -1,4 +1,11 @@
 ---
+resource_types:
+- name: keyval
+  type: docker-image
+  source:
+    repository: swce/keyval-resource 
+
+
 resources:
 - name: nginx-release
   type: git
@@ -12,6 +19,9 @@ resources:
     uri: git@github.com:mgurke/nginx-pipeline.git
     branch: master
     private_key: ((priv_key))
+- name: keyval
+  type: keyval
+
       
 
 jobs:
@@ -35,3 +45,23 @@ jobs:
         URL_PCRE_RELEASE: ((pcre-release))
         NGINX_VERSION: ((nginx-version))
         PCRE_VERSION: ((pcre-version))
+  - put: keyval
+    params:
+      file: keyval/keyval.properties
+
+- name: trigger
+  public: true
+  plan:
+  - task: deploy
+    config:
+      platform: linux
+      image_resource:
+        type: docker-image
+        source: {repository: concourse/bosh-cli}
+      run:
+        path: /bin/bash
+        args: 
+          - -exec
+          - |
+            echo "HELLO WORLD"
+  
