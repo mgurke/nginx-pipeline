@@ -12,7 +12,6 @@ resources:
     uri: git@github.com:mgurke/nginx-pipeline.git
     branch: master
     private_key: ((priv_key))
-
       
 
 jobs:
@@ -32,9 +31,8 @@ jobs:
         BOSH_CA_CERT: "((bosh_ca_cert))"
         BOSH_ALIAS: ((bosh_alias))
         BOSH_IP: ((bosh_ip))
-        GIT_KEY: ((priv_key))
-#    config:
-#      platform: linux
-#      inputs:
-#      - name: nginx-pipeline
-#      - name: connect_director
+        GIT_PASSWORD: ((git_pw)
+        URL_NGINX_RELEASE: ((nginx-release))
+        URL_PCRE_RELEASE: ((pcre-release))
+        NGINX_VERSION: ((nginx-version))
+        PCRE_VERSION: ((pcre-version))
