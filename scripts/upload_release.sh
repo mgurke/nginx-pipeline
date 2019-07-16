@@ -1,5 +1,5 @@
 #!/bin/bash
-cd mg-kt-cf/nginx-release
+cd nginx-release
 ls -la
 bosh delete-deployment -d nginx -n
 bosh create-release --force 

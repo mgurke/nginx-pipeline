@@ -1,4 +1,4 @@
 #!/bin/bash
-cd mg-kt-cf/nginx-release
+cd nginx-release
 bosh deploy -d nginx manifest.yml -n
 bosh deployments

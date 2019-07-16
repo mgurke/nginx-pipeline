@@ -1,5 +1,5 @@
 #!/bin/bash
-cd mg-kt-cf/nginx-release
+cd nginx-release
 wget $URL_NGINX_RELEASE -O nginx-$NGINX_VERSION.tar.gz
 wget $URL_PCRE_RELEASE -O pcre-$PCRE_VERSION.tar.gz
 
