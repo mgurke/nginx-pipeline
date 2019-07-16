@@ -4,4 +4,4 @@ ls -la
 bosh delete-deployment -d nginx -n
 
 bosh create-release --force 
-bosh upload-release
+bosh upload-release --rebase
