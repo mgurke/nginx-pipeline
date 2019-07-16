@@ -31,7 +31,6 @@ jobs:
         BOSH_CA_CERT: "((bosh_ca_cert))"
         BOSH_ALIAS: ((bosh_alias))
         BOSH_IP: ((bosh_ip))
-        GIT_PASSWORD: ((git_pw)
         URL_NGINX_RELEASE: ((nginx-release))
         URL_PCRE_RELEASE: ((pcre-release))
         NGINX_VERSION: ((nginx-version))
