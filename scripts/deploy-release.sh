@@ -14,21 +14,4 @@ echo "visit nginx under:"
 
 echo IP="$IP" >> ../keyval/keyval.properties
 
-
-
-props="../keyval/keyval.properties"
-if [ -f "$props" ]
-then
-  echo "Reading passed key values"
-  while IFS= read -r var
-  do
-    if [ ! -z "$IP" ]
-    then
-      echo "Adding: $IP"
-      export "$IP"
-    fi
-  done < "$props"
-fi
-
-
 cat ../keyval/keyval.properties
