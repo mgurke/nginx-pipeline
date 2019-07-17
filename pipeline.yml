@@ -85,7 +85,7 @@ jobs:
     passed:
     - deploy-nginx
   - get: nginx-pipeline
-    trigger: true
+    trigger: false
   - get: nginx-release
     trigger: true
   - task: test deployment
