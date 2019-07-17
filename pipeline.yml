@@ -74,7 +74,4 @@ jobs:
         URL_PCRE_RELEASE: ((pcre-release))
         NGINX_VERSION: ((nginx-version))
         PCRE_VERSION: ((pcre-version))
-    outputs:
-      - name: create-check  
-    run:
-      path: nginx-pipeline/scripts/create-check.sh
+        DEPLOYMENT_NAME: ((deployment_name))

@@ -7,13 +7,16 @@ bosh deploy -d $DEPLOYMENT_NAME manifest.yml -n
 
 
 # Find and write the IP of the nginx vm to the keyval file
+
+
 IP=$(bosh vms -d $DEPLOYMENT_NAME| awk '{print $4}')
 echo "visit nginx under:"
-echo IP="$IP" >> ${ROOT_FOLDER}/keyval/keyval.properties
+touch ${ROOT_FOLDER}/keyval/test.properties
+echo IP="$IP" >> ${ROOT_FOLDER}/keyval/test.properties
 
 
 
-props="${ROOT_FOLDER}/keyval/keyval.properties"
+props="${ROOT_FOLDER}/keyval/test.properties"
 if [ -f "$props" ]
 then
   echo "Reading passed key values"
@@ -28,4 +31,4 @@ then
 fi
 
 
-cat ${ROOT_FOLDER}/keyval/keyval.properties
+cat ${ROOT_FOLDER}/keyval/test.properties
