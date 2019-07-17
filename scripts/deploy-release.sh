@@ -16,7 +16,7 @@ echo IP="$IP" >> ../keyval/keyval.properties
 
 
 
-props="../keyval/test.properties"
+props="../keyval/keyval.properties"
 if [ -f "$props" ]
 then
   echo "Reading passed key values"
@@ -31,4 +31,4 @@ then
 fi
 
 
-cat ../keyval/test.properties
+cat ../keyval/keyval.properties
