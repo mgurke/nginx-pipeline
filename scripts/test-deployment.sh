@@ -1,4 +1,8 @@
 #!/bin/bash
-apt-get update -y
-apt-get install curl -y
-curl --fail $IP -d ../keyval/keyval.properties
+if (cat  ../keyval/keyval.properties | grep 'IP=' | awk '{print $2}' == $IP)
+    {
+    echo "all good"
+    }
+else {
+    echo "error, IP doesn't match"
+}
