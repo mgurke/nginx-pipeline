@@ -1,5 +1,5 @@
 #!/bin/bash
-apt-get update
+apt-get update -y
 apt-get install wget
 touch bosh.cert
 printf "\n$BOSH_CA_CERT" > bosh.cert
