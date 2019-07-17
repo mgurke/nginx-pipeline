@@ -11,8 +11,8 @@ bosh deploy -d $DEPLOYMENT_NAME manifest.yml -n
 
 IP=$(bosh vms -d $DEPLOYMENT_NAME| awk '{print $4}')
 echo "visit nginx under:"
-touch ${ROOT_FOLDER}/keyval/test.properties
-echo IP="$IP" >> ${ROOT_FOLDER}/keyval/test.properties
+touch ${ROOT_FOLDER}/keyval/keyval.properties
+echo IP="$IP" >> ${ROOT_FOLDER}/keyval/keyval.properties
 
 
 
