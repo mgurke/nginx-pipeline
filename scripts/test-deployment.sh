@@ -1,4 +1,5 @@
 #!/bin/bash
+sudo apt-get install curl
 
 PROPERTIES_FILE=${1:-"keyval/keyval.properties"}
 TEST_PORT=${2:-80}
