@@ -58,9 +58,7 @@ jobs:
     passed:
     - create-release
   - get: nginx-release
-    trigger: true
   - get: nginx-pipeline  
-    trigger: true
   - task: deploy-release
     file: nginx-pipeline/tasks/deploy-release.yml
     params:
@@ -90,8 +88,6 @@ jobs:
     - deploy-nginx
   - get: nginx-pipeline
     trigger: false
-  - get: nginx-release
-    trigger: true
   - task: test deployment
     file: nginx-pipeline/tasks/test-deployment.yml
     params:
