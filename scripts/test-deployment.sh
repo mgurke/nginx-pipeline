@@ -1,6 +1,6 @@
 #!/bin/bash
-apt-get update -y --fix-missing
-apt-get install curl
+apt-get -y update 
+apt-get -y install curl
 
 PROPERTIES_FILE=${1:-"keyval/keyval.properties"}
 TEST_PORT=${2:-80}
