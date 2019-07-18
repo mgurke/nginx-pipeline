@@ -1,4 +1,5 @@
 #!/bin/bash
+apt-get update -y
 apt-get install curl
 
 PROPERTIES_FILE=${1:-"keyval/keyval.properties"}
