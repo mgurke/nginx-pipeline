@@ -95,14 +95,4 @@ jobs:
   - task: test deployment
     file: nginx-pipeline/tasks/test-deployment.yml
     params:
-        BOSH_CLIENT: ((bosh_client))
-        BOSH_CLIENT_SECRET: ((bosh_client_secret))
-        BOSH_ENVIRONMENT: ((bosh_url))
-        BOSH_CA_CERT: "((bosh_ca_cert))"
-        BOSH_ALIAS: ((bosh_alias))
-        BOSH_IP: ((bosh_ip))
-        URL_NGINX_RELEASE: ((nginx-release))
-        URL_PCRE_RELEASE: ((pcre-release))
-        NGINX_VERSION: ((nginx-version))
-        PCRE_VERSION: ((pcre-version))
-        DEPLOYMENT_NAME: ((deployment_name))
+        PROPERTIES_FILE: keyval/keyval.properties
