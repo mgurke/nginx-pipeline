@@ -1,4 +1,4 @@
 #!/bin/bash
 
-mkdir trigger-test
+mkdir trigger-test -p
 touch trigger-test/trigger.properties
