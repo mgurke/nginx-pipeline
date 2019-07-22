@@ -10,6 +10,8 @@ inputs:
 - name: nginx-release
 - name: keyval
 
+outputs:
+- name: trigger-test
 
 
 run:

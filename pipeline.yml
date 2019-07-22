@@ -92,11 +92,11 @@ jobs:
     passed:
     - deploy-nginx
   - get: nginx-pipeline
-    trigger: false
+  - get: nginx-release
   - task: test deployment
     file: nginx-pipeline/tasks/test-deployment.yml
     params:
-        PROPERTIES_FILE: trigger-test/trigger.properties
+        PROPERTIES_FILE: trigger-test/keyval.properties
   - put: trigger-tag
     params:
       file: trigger-tag/trigger.properties
