@@ -21,6 +21,11 @@ resources:
     private_key: ((priv_key))
 - name: keyval
   type: keyval
+- name: trigger-test
+  type: keyval  
+- name: trigger-tag
+  type: keyval  
+
 
       
 
@@ -73,16 +78,16 @@ jobs:
         NGINX_VERSION: ((nginx-version))
         PCRE_VERSION: ((pcre-version))
         DEPLOYMENT_NAME: ((deployment_name))
-  - put: keyval
+  - put: trigger-test
     params:
-      file: keyval/keyval.properties
+      file: trigger-test/keyval.properties
     
 
 
 - name: test deployment
   public: true
   plan:
-  - get: keyval
+  - get: trigger-test
     trigger: true
     passed:
     - deploy-nginx
@@ -91,4 +96,25 @@ jobs:
   - task: test deployment
     file: nginx-pipeline/tasks/test-deployment.yml
     params:
-        PROPERTIES_FILE: keyval/keyval.properties
+        PROPERTIES_FILE: trigger-test/keyval.properties
+  - put: trigger-tag
+    params:
+      file: trigger-tag/trigger.properties
+
+#- name: tag
+#  public: true
+#  plan:
+#  - get: trigger-tag
+#    trigger: true
+#    passed:
+#    - test deployment
+#  - get: deploy nginx
+#    trigger: false
+#  - get: test deployment
+#    trigger: false
+#  - task: tag version
+#    file: nginx-pipeline/tasks/tag-version.yml
+#    params:
+#      repository: nginx-pipeline
+#      only_tag: true
+#      file: version-tag/version
