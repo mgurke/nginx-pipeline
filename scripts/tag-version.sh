@@ -17,4 +17,7 @@ CURRENT_TAG=$(git tag -l --sort -version:refname --points-at HEAD | head -n 1)
 if [ "$VERSION" != "$CURRENT_TAG" ]; then
     let "VERSION_MINOR+=1"
     fi
+
+mkdir -p version-tag
+touch version-tag/version
 echo "$VERSION_MAJOR.$VERSION_MINOR" > version-tag/version
