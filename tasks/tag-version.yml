@@ -13,4 +13,4 @@ inputs:
 
 run:
   path: nginx-pipeline/tasks/tag-version.sh
-  args: [nginx-pipeline, nginx-release]
+  args: [nginx-pipeline, nginx-release, version-tag/version]
