@@ -6,8 +6,8 @@ cd nginx-pipeline
 
 VERSION=$(git tag -l --sort -version:refname | head -n 1)
 if [ "$VERSION" = "" ]; then
-    $VERSION=v1.0
-fi
+    $VERSION="v1.0"
+    fi
 VERSION_MAJOR=$(echo $VERSION | cut -d '.' -f1)
 VERSION_MINOR=$(echo $VERSION | cut -d '.' -f2)
 # Grab all version tags of the HEAD commit and return the highest one
