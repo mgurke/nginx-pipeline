@@ -27,6 +27,7 @@ resources:
   type: keyval  
 
 
+
       
 
 jobs:
@@ -84,7 +85,7 @@ jobs:
     
 
 
-- name: test deployment
+- name: test-deployment
   public: true
   plan:
   - get: trigger-test
@@ -93,7 +94,7 @@ jobs:
     - deploy-nginx
   - get: nginx-pipeline
   - get: nginx-release
-  - task: test deployment
+  - task: test-deployment
     file: nginx-pipeline/tasks/test-deployment.yml
     params:
         PROPERTIES_FILE: trigger-test/keyval.properties
@@ -101,16 +102,18 @@ jobs:
     params:
       file: trigger-tag/trigger.properties
 
-- name: tag
+- name: tag-version
   public: true
   plan:
   - get: nginx-pipeline
+  - get: keyval
   - get: trigger-tag
     trigger: true
     passed:
-    - test deployment
-  - task: tag version
+    - test-deployment
+  - task: tag-version
     file: nginx-pipeline/tasks/tag-version.yml
+  - put: nginx-pipeline
     params:
       repository: nginx-pipeline
       only_tag: true
