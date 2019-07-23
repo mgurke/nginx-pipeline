@@ -106,6 +106,7 @@ jobs:
   public: true
   plan:
   - get: nginx-pipeline
+  - get: nginx-release
   - get: keyval
   - get: trigger-tag
     trigger: true
