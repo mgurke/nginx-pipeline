@@ -101,20 +101,17 @@ jobs:
     params:
       file: trigger-tag/trigger.properties
 
-#- name: tag
-#  public: true
-#  plan:
-#  - get: trigger-tag
-#    trigger: true
-#    passed:
-#    - test deployment
-#  - get: deploy nginx
-#    trigger: false
-#  - get: test deployment
-#    trigger: false
-#  - task: tag version
-#    file: nginx-pipeline/tasks/tag-version.yml
-#    params:
-#      repository: nginx-pipeline
-#      only_tag: true
-#      file: version-tag/version
+- name: tag
+  public: true
+  plan:
+  - get: nginx-pipeline
+  - get: trigger-tag
+    trigger: true
+    passed:
+    - test deployment
+  - task: tag version
+    file: nginx-pipeline/tasks/tag-version.yml
+    params:
+      repository: nginx-pipeline
+      only_tag: true
+      tag: version-tag/version
