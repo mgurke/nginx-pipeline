@@ -6,7 +6,7 @@ cd nginx-pipeline
 
 VERSION=$(git tag -l --sort -version:refname | head -n 1)
 if [ "$VERSION" = "" ]; then
-    echo 'Hello Knecht!'
+    $VERSION=v1.0
 fi
 VERSION_MAJOR=$(echo $VERSION | cut -d '.' -f1)
 VERSION_MINOR=$(echo $VERSION | cut -d '.' -f2)
