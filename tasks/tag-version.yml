@@ -10,7 +10,7 @@ inputs:
 - name: keyval
 
 outputs:
-- name: nginx-pipeline
+- name: version-tag
 
 
 
