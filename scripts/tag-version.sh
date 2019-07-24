@@ -18,6 +18,7 @@ if [ "$VERSION" != "$CURRENT_TAG" ]; then
     let "VERSION_MINOR+=1"
     fi
 
+cd ..
 mkdir -p version-tag
 touch version-tag/version
 echo "$VERSION_MAJOR.$VERSION_MINOR" > version-tag/version
