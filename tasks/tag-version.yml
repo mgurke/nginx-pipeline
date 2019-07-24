@@ -9,7 +9,7 @@ inputs:
 - name: nginx-pipeline
 - name: keyval
 
-output:
+outputs:
 - name: nginx-pipeline
 
 
