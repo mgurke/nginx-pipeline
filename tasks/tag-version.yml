@@ -9,6 +9,9 @@ inputs:
 - name: nginx-pipeline
 - name: keyval
 
+output:
+- name: nginx-pipeline
+
 
 
 run:
